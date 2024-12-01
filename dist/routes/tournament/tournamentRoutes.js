@@ -1,0 +1,16 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const createTournament_1 = require("../../controllers/tournament/tournamentCotroller/createTournament");
+const getTournaments_1 = require("../../controllers/tournament/tournamentCotroller/getTournaments");
+const getTournamentById_1 = require("../../controllers/tournament/tournamentCotroller/getTournamentById");
+const updateTournament_1 = require("../../controllers/tournament/tournamentCotroller/updateTournament");
+const auth_1 = require("../../middleware/auth");
+const deleteTournament_1 = require("../../controllers/tournament/tournamentCotroller/deleteTournament");
+const router = (0, express_1.Router)();
+router.post('/create-tournaments', auth_1.validateJWT, createTournament_1.createTournament);
+router.get('/gettournaments', auth_1.validateJWT, getTournaments_1.getTournaments);
+router.get('/:id', auth_1.validateJWT, getTournamentById_1.getTournamentById);
+router.put('/:id', auth_1.validateJWT, updateTournament_1.updateTournament);
+router.delete('/tournaments/:id', auth_1.validateJWT, deleteTournament_1.deleteTournament);
+exports.default = router;

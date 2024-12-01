@@ -2,7 +2,6 @@ import { Request, Response } from 'express';
 import { tournamentCreateValidator } from '../../../validators/tournamentValidator';
 import Tournament from '../../../models/tournament/tournamentModel';
 
-// Create new tournament
 export const createTournament = async (req: Request, res: Response): Promise<any> => {
   try {
     const { error, value } = tournamentCreateValidator.validate(req.body, { abortEarly: false });
@@ -51,7 +50,6 @@ export const createTournament = async (req: Request, res: Response): Promise<any
       }
     }
 
-    // Create the tournament if no conflict
     const tournament = await Tournament.create(value);
 
     return res.status(201).json({

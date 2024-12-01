@@ -5,8 +5,6 @@ import MatchForTournament from '../../../models/tournament/matchForTournamentMod
 import { matchValidationSchemaForTournament, tournamentIdValidationSchema } from '../../../validators/tournamentMatchValidator';
 
 
-
-// Create new match in a tournament
 export const createTournamentMatch = async (req: Request, res: Response): Promise<any> => {
     try {
         const { error: tournamentIdError } = tournamentIdValidationSchema.validate(req.params);
@@ -14,7 +12,6 @@ export const createTournamentMatch = async (req: Request, res: Response): Promis
             return res.status(400).json({ message: tournamentIdError.details[0].message });
         }
 
-        // Validate request body
         const { error: bodyError } = matchValidationSchemaForTournament.validate(req.body);
         if (bodyError) {
             return res.status(400).json({ message: bodyError.details[0].message });
@@ -23,13 +20,11 @@ export const createTournamentMatch = async (req: Request, res: Response): Promis
         const { tournamentId } = req.params;
         const { team1Id, team2Id, start_time, end_time } = req.body;
 
-        // Validate tournament
         const tournament = await Tournament.findByPk(tournamentId);
         if (!tournament) {
             return res.status(404).json({ message: 'Tournament not found' });
         }
 
-        // Validate entries (teams)
         const team1 = await Entry.findByPk(team1Id);
         const team2 = await Entry.findByPk(team2Id);
 
@@ -47,7 +42,6 @@ export const createTournamentMatch = async (req: Request, res: Response): Promis
             return res.status(400).json({ message: 'Team 2 is not granted yet' });
         }
 
-        // Create match
         const match = await MatchForTournament.create({
             tournament_id: tournamentId,
             team1_id: team1Id,

@@ -4,7 +4,6 @@ import { validateGetLeaguesQuery } from '../../../validators/leagueValidator';
 
 
 export const getLeagues = async (req: Request, res: Response): Promise<any> => {
-  // Validate query parameters
   const { error } = validateGetLeaguesQuery.validate(req.query);
   if (error) {
     return res.status(400).json({
@@ -23,10 +22,12 @@ export const getLeagues = async (req: Request, res: Response): Promise<any> => {
 
   try {
     const leagues = await League.findAll({
-      where: name ? { name } : undefined,  // Apply filtering based on name if provided
-      order: [[sortBy as string, order as string]],  // Apply sorting on starting date
-      offset: (parseInt(page as string) - 1) * parseInt(limit as string),  // Pagination offset
-      limit: parseInt(limit as string),  // Pagination limit
+      where: name ? { name } : undefined,
+      // Apply sorting on starting date 
+      order: [[sortBy as string, order as string]],
+      // Pagination 
+      offset: (parseInt(page as string) - 1) * parseInt(limit as string),
+      limit: parseInt(limit as string),
     });
 
     return res.status(200).json(leagues);

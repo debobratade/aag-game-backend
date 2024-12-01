@@ -33,7 +33,6 @@ app.use("/api/team", teamRoutes);
 app.use("/api", entryRoutes);
 app.use("/api", tournamentMatchRoutes);
 
-// Setup associations
 setupAssociations();
 const startServer = async () => {
   try {
@@ -54,3 +53,4 @@ const startServer = async () => {
 startServer();
 
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+export default app; 

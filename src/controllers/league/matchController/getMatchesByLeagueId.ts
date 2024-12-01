@@ -3,7 +3,6 @@ import Match from "../../../models/league/matchModel";
 import Team from "../../../models/league/teamModel";
 import League from "../../../models/league/leagueModel";
 
-// Get all matches in a league
 export const getMatchesByLeagueId = async (req: Request, res: Response): Promise<any> => {
     try {
         const leagueId = Number(req.params.leagueId);

@@ -6,13 +6,11 @@ export const getLeagueById = async (req: Request, res: Response): Promise<void> 
   try {
     const leagueId = parseInt(req.params.id, 10);
 
-    // Validate the league ID parameter
     if (isNaN(leagueId)) {
       res.status(400).json({ message: 'Invalid league ID. It must be a number.' });
       return;
     }
 
-    // Fetch the league with optional eager loading of associated teams
     const league = await League.findByPk(leagueId, {
       include: [
         {
@@ -20,7 +18,6 @@ export const getLeagueById = async (req: Request, res: Response): Promise<void> 
           as: 'teams',
         },
       ],
-      // Exclude unnecessary fields
       attributes: { exclude: ['createdAt', 'updatedAt'] }, 
     });
 

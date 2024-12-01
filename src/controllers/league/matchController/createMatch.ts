@@ -28,7 +28,6 @@ export const createMatch = async (req: Request, res: Response): Promise<any> => 
       return res.status(404).json({ message: 'One or both teams not found' });
     }
 
-    // Ensure the match times are within the league's start and end dates
     if (
       req.body.start_time < league.start_time ||
       req.body.end_time > league.end_time ||
@@ -39,12 +38,13 @@ export const createMatch = async (req: Request, res: Response): Promise<any> => 
       });
     }
 
-    // Check for overlapping matches between the same teams
     const overlappingMatch = await Match.findOne({
       where: {
         leagueId: req.params.leagueId,
-        start_time: { [Op.lt]: req.body.end_time }, // Existing match starts before the new match ends
-        end_time: { [Op.gt]: req.body.start_time }, // Existing match ends after the new match starts
+        // Existing match starts before the new match ends
+        start_time: { [Op.lt]: req.body.end_time }, 
+        // Existing match ends after the new match starts
+        end_time: { [Op.gt]: req.body.start_time }, 
         [Op.or]: [
           { team1Id: req.body.team1Id, team2Id: req.body.team2Id },
           { team1Id: req.body.team2Id, team2Id: req.body.team1Id }, 
@@ -58,7 +58,6 @@ export const createMatch = async (req: Request, res: Response): Promise<any> => 
       });
     }
 
-    // Create the new match
     const match = await Match.create({
       leagueId: req.params.leagueId,
       team1Id: req.body.team1Id,

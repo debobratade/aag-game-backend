@@ -3,7 +3,6 @@ import Match from "../../../models/league/matchModel";
 import Team from "../../../models/league/teamModel";
 import League from "../../../models/league/leagueModel";
 
-// Get match by ID
 export const getMatchById = async (req: Request, res: Response): Promise<any> => {
     try {
         const matchId = Number(req.params.matchId);
@@ -11,7 +10,6 @@ export const getMatchById = async (req: Request, res: Response): Promise<any> =>
             return res.status(400).json({ message: "Invalid match ID format" });
         }
 
-        // Fetch match with related data
         const match = await Match.findByPk(matchId, {
             include: [
                 { model: Team, as: "team1" }, 

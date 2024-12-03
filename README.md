@@ -14,6 +14,7 @@ Key features of the project include:
 
 The project is built using modern web technologies, ensuring a scalable and maintainable codebase.
 
+# TOURNAMENT-LEAGUE
 
 ## Project Overview
 
@@ -176,7 +177,7 @@ Matches are the individual games played between teams within a tournament.
 ### Subscription API
 
 
-### API documentation for the `addSubscription` function:
+## API documentation for the `addSubscription` function:
 
 #### POST /api/subscriptions
 
@@ -286,7 +287,7 @@ Matches are the individual games played between teams within a tournament.
 
 
 
-### API documentation for the `getSubscriptions` function:
+## API documentation for the `getSubscriptions` function:
 
 #### GET /api/subscriptions
 
@@ -371,7 +372,7 @@ Matches are the individual games played between teams within a tournament.
 
 
 
-### API documentation for the `selectSubscription` function:
+## API documentation for the `selectSubscription` function:
 
 #### POST /api/users/select
 
@@ -481,7 +482,7 @@ Matches are the individual games played between teams within a tournament.
 
 ### User API
 
-### API documentation for the `sendOtpController` function:
+## API documentation for the `sendOtpController` function:
 
 #### POST /api/users/send-otp
 
@@ -578,7 +579,7 @@ Matches are the individual games played between teams within a tournament.
 
 
 
-### API documentation for the `verify-otp` function:
+## API documentation for the `verify-otp` function:
 
 #### POST /api/users/verify-otp
 
@@ -687,7 +688,7 @@ Matches are the individual games played between teams within a tournament.
 
 
 
-### API documentation for the `updateEntryStatus` function:
+## API documentation for the `updateEntryStatus` function:
 
 #### POST /api/users/signup
 
@@ -862,7 +863,7 @@ Matches are the individual games played between teams within a tournament.
 
 
 
-### API documentation for the `create-password` function:
+## API documentation for the `create-password` function:
 
 #### POST /api/users/create-password
 
@@ -987,7 +988,7 @@ Matches are the individual games played between teams within a tournament.
 
 
 
-### API documentation for the `signInController` function:
+## API documentation for the `signInController` function:
 
 #### POST /api/users/signin
 
@@ -1132,7 +1133,7 @@ Matches are the individual games played between teams within a tournament.
 
 ### League API
 
-### API documentation for the `createLeague` function:
+## API documentation for the `createLeague` function:
 
 #### POST /api/leagues/create-leagues
 
@@ -1249,7 +1250,7 @@ Matches are the individual games played between teams within a tournament.
 
 
 
-### API documentation for the `deleteLeague` function:
+## API documentation for the `deleteLeague` function:
 
 #### DELETE /api/leagues/delete-leagues/:id
 
@@ -1323,7 +1324,7 @@ Matches are the individual games played between teams within a tournament.
 
 
 
-### API documentation for the `getLeagues` function:
+## API documentation for the `getLeagues` function:
 
 #### GET /api/leagues/get-leagues
 
@@ -1431,7 +1432,7 @@ Matches are the individual games played between teams within a tournament.
 
 
 
-### API documentation for the `getLeagueById` function:
+## API documentation for the `getLeagueById` function:
 
 #### GET /api/leagues/:id
 
@@ -1556,7 +1557,7 @@ Matches are the individual games played between teams within a tournament.
 
 
 
-### API documentation for the `updateLeague` function:
+## API documentation for the `updateLeague` function:
 
 #### PUT /api/update-leagues/:id
 
@@ -1697,7 +1698,7 @@ Matches are the individual games played between teams within a tournament.
 
 
 
-### API documentation for the `deleteLeague` function:
+## API documentation for the `deleteLeague` function:
 
 #### DELETE /api/leagues/delete-leagues/:id
 
@@ -1773,7 +1774,7 @@ Matches are the individual games played between teams within a tournament.
 
 ### Match API
 
-### API documentation for the `createMatch` function:
+## API documentation for the `createMatch` function:
 
 #### POST /api/match/:leagueId/create-matches
 
@@ -1946,7 +1947,7 @@ Matches are the individual games played between teams within a tournament.
 
 
 
-### API documentation for the `getMatchById` function:
+## API documentation for the `getMatchById` function:
 
 #### GET /api/match/:matchId
 
@@ -2090,7 +2091,7 @@ Matches are the individual games played between teams within a tournament.
 
 
 
-### API documentation for the `getMatchesByLeagueId` function:
+## API documentation for the `getMatchesByLeagueId` function:
 
 #### GET /api/match/league/:leagueId
 
@@ -2223,7 +2224,7 @@ Matches are the individual games played between teams within a tournament.
 
 
 
-### API documentation for the `getMatchById` function:
+## API documentation for the `getMatchById` function:
 
 #### GET /api/match/:matchId
 
@@ -2321,7 +2322,7 @@ Matches are the individual games played between teams within a tournament.
 
 
 
-### API documentation for the `updateMatchResult` function:
+## API documentation for the `updateMatchResult` function:
 
 #### PUT /api/match/:matchId/result
 
@@ -2467,7 +2468,7 @@ Matches are the individual games played between teams within a tournament.
 
 ### Team API
 
-### API documentation for the `createMatch` function:
+## API documentation for the `createMatch` function:
 
 #### POST /api/team/:leagueId/create-teams
 
@@ -2601,7 +2602,7 @@ Matches are the individual games played between teams within a tournament.
 
 
 
-### API documentation for the `getTeamById` function:
+## API documentation for the `getTeamById` function:
 
 #### GET /api/team/:teamId
 
@@ -2730,7 +2731,7 @@ Matches are the individual games played between teams within a tournament.
 
 
 
-### API documentation for the `getTeamsByLeagueId` function:
+## API documentation for the `getTeamsByLeagueId` function:
 
 #### GET /api/team/:leagueId/get-teams
 
@@ -2857,7 +2858,7 @@ Matches are the individual games played between teams within a tournament.
 
 
 
-### API documentation for the `getTeamsByUserId` function:
+## API documentation for the `getTeamsByUserId` function:
 
 #### GET /api/team/user/:userId
 
@@ -2976,7 +2977,7 @@ Matches are the individual games played between teams within a tournament.
 
 ### Tournament API
 
-### API documentation for the `createTournament` function:
+## API documentation for the `createTournament` function:
 
 #### POST /api/tournaments/create-tournaments
 
@@ -3151,7 +3152,7 @@ Matches are the individual games played between teams within a tournament.
 
 
 
-### API documentation for the `deleteTournament` function:
+## API documentation for the `deleteTournament` function:
 
 #### DELETE /api/tournaments/tournaments/:id
 
@@ -3241,7 +3242,7 @@ Matches are the individual games played between teams within a tournament.
 
 
 
-### API documentation for the `getTournamentById` function:
+## API documentation for the `getTournamentById` function:
 
 #### GET /api/tournaments/:id
 
@@ -3356,7 +3357,7 @@ Matches are the individual games played between teams within a tournament.
 
 
 
-### API documentation for the `getTournaments` function:
+## API documentation for the `getTournaments` function:
 
 #### GET /api/tournaments
 
@@ -3463,7 +3464,7 @@ Matches are the individual games played between teams within a tournament.
 
 
 
-### API documentation for the `updateTournament` function:
+## API documentation for the `updateTournament` function:
 
 #### PUT /api/tournaments/:id
 
@@ -3645,7 +3646,7 @@ Matches are the individual games played between teams within a tournament.
 
 ### Entry API
 
-### API documentation for the `enterTournament` function:
+## API documentation for the `enterTournament` function:
 
 #### POST /api/tournament/:tournamentId/enter
 
@@ -3791,7 +3792,7 @@ Matches are the individual games played between teams within a tournament.
 
 
 
-### API documentation for the `getUserEntries` function:
+## API documentation for the `getUserEntries` function:
 
 #### GET /api/user/:userId/entries
 
@@ -3901,7 +3902,7 @@ Matches are the individual games played between teams within a tournament.
 
 
 
-### API documentation for the `updateEntryStatus` function:
+## API documentation for the `updateEntryStatus` function:
 
 #### PUT /api/entries/:entryId/status
 
@@ -4028,7 +4029,7 @@ Matches are the individual games played between teams within a tournament.
 
 ### Tournament Match API
 
-### API documentation for the `createTournamentMatch` function:
+## API documentation for the `createTournamentMatch` function:
 
 #### POST /api/tournaments/:tournamentId/matches
 
@@ -4207,7 +4208,7 @@ Matches are the individual games played between teams within a tournament.
 
 
 
-### API documentation for the `matchmake` function:
+## API documentation for the `matchmake` function:
 
 #### POST /api/tournaments/matchmake
 
@@ -4330,7 +4331,7 @@ Matches are the individual games played between teams within a tournament.
 
 
 
-### API documentation for the `updateMatchResult` function:
+## API documentation for the `updateMatchResult` function:
 
 #### PUT /api/tournaments/matches/:matchId/result
 

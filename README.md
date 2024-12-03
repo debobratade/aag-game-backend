@@ -14,6 +14,7 @@ Key features of the project include:
 
 The project is built using modern web technologies, ensuring a scalable and maintainable codebase.
 
+
 ## Project Overview
 
 **TOURNAMENT-LEAGUE** is a comprehensive web application designed to manage and facilitate sports leagues and tournaments. The application provides a platform for users to create, manage, and participate in various leagues and tournaments. It aims to streamline the process of organizing sports events by offering features like user authentication, league creation, tournament management, team management, and match scheduling.
@@ -172,7 +173,7 @@ Matches are the individual games played between teams within a tournament.
 
 ## Api Documentation
 
-### Subscription API
+# Subscription API
 
 
 ## API documentation for the `addSubscription` function:
@@ -478,7 +479,7 @@ Matches are the individual games played between teams within a tournament.
 
 
 
-### User API
+# User API
 
 ## API documentation for the `sendOtpController` function:
 
@@ -1129,7 +1130,7 @@ Matches are the individual games played between teams within a tournament.
 
 
 
-### League API
+# League API
 
 ## API documentation for the `createLeague` function:
 
@@ -1770,7 +1771,7 @@ Matches are the individual games played between teams within a tournament.
 
 
 
-### Match API
+# Match API
 
 ## API documentation for the `createMatch` function:
 
@@ -2464,7 +2465,7 @@ Matches are the individual games played between teams within a tournament.
 
 
 
-### Team API
+# Team API
 
 ## API documentation for the `createMatch` function:
 
@@ -2973,7 +2974,7 @@ Matches are the individual games played between teams within a tournament.
 
 
 
-### Tournament API
+# Tournament API
 
 ## API documentation for the `createTournament` function:
 
@@ -3642,7 +3643,7 @@ Matches are the individual games played between teams within a tournament.
 
 
 
-### Entry API
+# Entry API
 
 ## API documentation for the `enterTournament` function:
 
@@ -4025,7 +4026,7 @@ Matches are the individual games played between teams within a tournament.
 
 
 
-### Tournament Match API
+# Tournament Match API
 
 ## API documentation for the `createTournamentMatch` function:
 

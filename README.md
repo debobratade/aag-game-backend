@@ -176,7 +176,7 @@ Matches are the individual games played between teams within a tournament.
 
 ### Subscription API
 
-API documentation for the `addSubscription` function:
+### API documentation for the `addSubscription` function:
 
 #### POST /api/subscriptions
 
@@ -283,7 +283,7 @@ API documentation for the `addSubscription` function:
 - **Create Subscription**: If validation passes and the subscription name is not already used, a new subscription is created in the `Subscription` model.
 - **Return Response**: If the subscription is successfully created, a `201 Created` response is returned with the new subscription details and a success message.
 
-API documentation for the `getSubscriptions` function:
+### API documentation for the `getSubscriptions` function:
 
 #### GET /api/subscriptions
 
@@ -366,7 +366,7 @@ API documentation for the `getSubscriptions` function:
 - **Return Response**: If the subscriptions are successfully retrieved, a `200 OK` response is returned with the list of subscriptions.
 - **Error Handling**: If there is an error while fetching subscriptions, a `500 Internal Server Error` response is returned with an appropriate message.
 
-API documentation for the `selectSubscription` function:
+### API documentation for the `selectSubscription` function:
 
 #### POST /api/users/select
 
@@ -474,7 +474,7 @@ API documentation for the `selectSubscription` function:
 
 ### User API
 
-API documentation for the `sendOtpController` function:
+### API documentation for the `sendOtpController` function:
 
 #### POST /api/users/send-otp
 
@@ -568,7 +568,7 @@ API documentation for the `sendOtpController` function:
 - **Upsert Phone Number and OTP**: The phone number and OTP are upserted in the `PhoneNumber` model.
 - **Return Response**: If the OTP is successfully sent, a `200 OK` response is returned with the OTP and a success message.
 
-API documentation for the `verify-otp` function:
+### API documentation for the `verify-otp` function:
 
 #### POST /api/users/verify-otp
 
@@ -674,7 +674,7 @@ API documentation for the `verify-otp` function:
 - **Update Verification Status**: If the OTP is valid and the phone number exists, the verification status of the phone number is updated, and the changes are saved.
 - **Return Response**: If the OTP is successfully verified, a `200 OK` response is returned with a success message.
 
-API documentation for the `updateEntryStatus` function:
+### API documentation for the `updateEntryStatus` function:
 
 #### POST /api/users/signup
 
@@ -846,7 +846,7 @@ API documentation for the `updateEntryStatus` function:
 - **Update Phone Record**: The phone record is updated to mark the phone number as registered.
 - **Return Response**: If the user is successfully created, a `201 Created` response is returned with the user details and a success message.
 
-API documentation for the `create-password` function:
+### API documentation for the `create-password` function:
 
 #### POST /api/users/create-password
 
@@ -968,7 +968,7 @@ API documentation for the `create-password` function:
 - **Create signin Record**: A new signin record is created in the `SignIn` model with the hashed password.
 - **Return Response**: If the password is successfully created, a `201 Created` response is returned with a success message.
 
-API documentation for the `signInController` function:
+### API documentation for the `signInController` function:
 
 #### POST /api/users/signin
 
@@ -1110,7 +1110,7 @@ API documentation for the `signInController` function:
 
 ### League API
 
-API documentation for the `createLeague` function:
+### API documentation for the `createLeague` function:
 
 #### POST /api/leagues/create-leagues
 
@@ -1224,7 +1224,7 @@ API documentation for the `createLeague` function:
 - **Create League**: If validation passes and there are no conflicts, a new league is created in the `League` model.
 - **Return Response**: If the league is successfully created, a `201 Created` response is returned with the league details.
 
-API documentation for the `deleteLeague` function:
+### API documentation for the `deleteLeague` function:
 
 #### DELETE /api/leagues/delete-leagues/:id
 
@@ -1295,7 +1295,7 @@ API documentation for the `deleteLeague` function:
 - **Delete League**: The league is then deleted using the `destroy` method on the `League` model.
 - **Return Response**: If the league and its associated entities are successfully deleted, a `204 No Content` response is returned. If any errors occur during the process, a `500 Internal Server Error` response is returned with the error message.
 
-API documentation for the `getLeagues` function:
+### API documentation for the `getLeagues` function:
 
 #### GET /api/leagues/get-leagues
 
@@ -1400,7 +1400,7 @@ API documentation for the `getLeagues` function:
 - **Fetch Leagues**: The leagues are retrieved based on the query parameters, including pagination, sorting, and optional filtering by name. If the query parameters are invalid, appropriate error responses are returned.
 - **Return Response**: If the leagues are successfully retrieved, a `200 OK` response is returned with the list of leagues. If any errors occur during the process, a `500 Internal Server Error` response is returned with the error message.
 
-API documentation for the `getLeagueById` function:
+### API documentation for the `getLeagueById` function:
 
 #### GET /api/leagues/:id
 
@@ -1522,7 +1522,7 @@ API documentation for the `getLeagueById` function:
 - **Fetch League**: The league is retrieved by its ID using the `findByPk` method, including its associated teams. If the league is not found, a `404 Not Found` response is returned with an appropriate message.
 - **Return Response**: If the league is successfully retrieved, a `200 OK` response is returned with the league details, including its associated teams. If any errors occur during the process, a `500 Internal Server Error` response is returned with the error message.
 
-API documentation for the `updateLeague` function:
+### API documentation for the `updateLeague` function:
 
 #### PUT /api/update-leagues/:id
 
@@ -1660,7 +1660,7 @@ API documentation for the `updateLeague` function:
 - **Update League**: If validation passes and there are no conflicts, the league is updated with the new details provided in the request body.
 - **Return Response**: If the league is successfully updated, a `200 OK` response is returned with the updated league details.
 
-API documentation for the `deleteLeague` function:
+### API documentation for the `deleteLeague` function:
 
 #### DELETE /api/leagues/delete-leagues/:id
 
@@ -1733,7 +1733,7 @@ API documentation for the `deleteLeague` function:
 
 ### Match API
 
-API documentation for the `createMatch` function:
+### API documentation for the `createMatch` function:
 
 #### POST /api/match/:leagueId/create-matches
 
@@ -1903,7 +1903,7 @@ API documentation for the `createMatch` function:
 - **Create Match**: If all validations pass and there are no conflicts, a new match is created in the `Match` model.
 - **Return Response**: If the match is successfully created, a `201 Created` response is returned with the match details.
 
-API documentation for the `getMatchById` function:
+### API documentation for the `getMatchById` function:
 
 #### GET /api/match/:matchId
 
@@ -2044,7 +2044,7 @@ API documentation for the `getMatchById` function:
 - **Fetch Match**: The match is retrieved by its ID using the `findByPk` method, including its associated teams and league. If the match is not found, a `404 Not Found` response is returned with an appropriate message.
 - **Return Response**: If the match is successfully retrieved, a `200 OK` response is returned with the match details, including its associated teams and league. If any errors occur during the process, a `500 Internal Server Error` response is returned with the error message.
 
-API documentation for the `getMatchesByLeagueId` function:
+### API documentation for the `getMatchesByLeagueId` function:
 
 #### GET /api/match/league/:leagueId
 
@@ -2174,7 +2174,7 @@ API documentation for the `getMatchesByLeagueId` function:
 - **Fetch Matches**: The matches are retrieved by the league ID using the `findAll` method, including their associated teams and league. If any errors occur during the process, a `500 Internal Server Error` response is returned with the error message.
 - **Return Response**: If the matches are successfully retrieved, a `200 OK` response is returned with the list of matches, including their associated teams and league details.
 
-API documentation for the `getMatchById` function:
+### API documentation for the `getMatchById` function:
 
 #### GET /api/match/:matchId
 
@@ -2269,7 +2269,7 @@ API documentation for the `getMatchById` function:
 - **Fetch Match**: The match is retrieved by its ID using the `findByPk` method with the `attributes` option to only include the `result`. If the match is not found, a `404 Not Found` response is returned with an appropriate message.
 - **Return Response**: If the match is successfully retrieved, a `200 OK` response is returned with the match result. If any errors occur during the process, a `500 Internal Server Error` response is returned with the error message.
 
-API documentation for the `updateMatchResult` function:
+### API documentation for the `updateMatchResult` function:
 
 #### PUT /api/match/:matchId/result
 
@@ -2412,7 +2412,7 @@ API documentation for the `updateMatchResult` function:
 
 ### Team API
 
-API documentation for the `createMatch` function:
+### API documentation for the `createMatch` function:
 
 #### POST /api/team/:leagueId/create-teams
 
@@ -2543,7 +2543,7 @@ API documentation for the `createMatch` function:
 - **Create Team**: If validation passes and the league and user exist, a new team is created in the `Team` model.
 - **Return Response**: If the team is successfully created, a `201 Created` response is returned with the team details. If any errors occur during the process, a `500 Internal Server Error` response is returned with the error message.
 
-API documentation for the `getTeamById` function:
+### API documentation for the `getTeamById` function:
 
 #### GET /api/team/:teamId
 
@@ -2669,7 +2669,7 @@ API documentation for the `getTeamById` function:
 - **Fetch Team**: The team is retrieved by its ID using the `findByPk` method, including its associated league and user. If the team is not found, a `404 Not Found` response is returned with an appropriate message.
 - **Return Response**: If the team is successfully retrieved, a `200 OK` response is returned with the team details, including its associated league and user. If any errors occur during the process, a `500 Internal Server Error` response is returned with the error message.
 
-API documentation for the `getTeamsByLeagueId` function:
+### API documentation for the `getTeamsByLeagueId` function:
 
 #### GET /api/team/:leagueId/get-teams
 
@@ -2793,7 +2793,7 @@ API documentation for the `getTeamsByLeagueId` function:
 - **Fetch Teams**: The teams are retrieved by the league ID using the `findAll` method, including their associated league and user details. If no teams are found, a `404 Not Found` response is returned with an appropriate message.
 - **Return Response**: If the teams are successfully retrieved, a `200 OK` response is returned with the list of teams, including their associated league and user details. If any errors occur during the process, a `500 Internal Server Error` response is returned with the error message.
 
-API documentation for the `getTeamsByUserId` function:
+### API documentation for the `getTeamsByUserId` function:
 
 #### GET /api/team/user/:userId
 
@@ -2909,7 +2909,7 @@ API documentation for the `getTeamsByUserId` function:
 
 ### Tournament Match API
 
-API documentation for the `createTournament` function:
+### API documentation for the `createTournament` function:
 
 ### Tournament API
 
@@ -3083,7 +3083,7 @@ API documentation for the `createTournament` function:
 - **Create Tournament**: If validation passes and there are no conflicts, the tournament is created in the `Tournament` model.
 - **Return Response**: If the tournament is successfully created, a `201 Created` response is returned with a success message and the created tournament details. If any errors occur during the process, a `500 Internal Server Error` response is returned with the error message.
 
-API documentation for the `deleteTournament` function:
+### API documentation for the `deleteTournament` function:
 
 #### DELETE /api/tournaments/tournaments/:id
 
@@ -3170,7 +3170,7 @@ API documentation for the `deleteTournament` function:
 - **Delete Tournament**: The tournament is then deleted using the `destroy` method on the `Tournament` model. If the tournament is not found, a `404 Not Found` response is returned with an appropriate message.
 - **Return Response**: If the tournament and its associated entities are successfully deleted, a `204 No Content` response is returned. If any errors occur during the process, a `500 Internal Server Error` response is returned with the error message.
 
-API documentation for the `getTournamentById` function:
+### API documentation for the `getTournamentById` function:
 
 #### GET /api/tournaments/:id
 
@@ -3282,7 +3282,7 @@ API documentation for the `getTournamentById` function:
 - **Fetch Tournament**: The tournament is retrieved by its ID using the `findByPk` method. If the tournament is not found, a `404 Not Found` response is returned with an appropriate message.
 - **Return Response**: If the tournament is successfully retrieved, a `200 OK` response is returned with the tournament details. If any errors occur during the process, a `500 Internal Server Error` response is returned with the error message.
 
-API documentation for the `getTournaments` function:
+### API documentation for the `getTournaments` function:
 
 #### GET /api/tournaments
 
@@ -3386,7 +3386,7 @@ API documentation for the `getTournaments` function:
 - **Fetch Tournaments**: The tournaments are retrieved based on the query parameters, including pagination, sorting, and optional filtering by name, start time, and end time. If any errors occur during the process, appropriate error responses are returned.
 - **Return Response**: If the tournaments are successfully retrieved, a `200 OK` response is returned with the list of tournaments and pagination details. If any errors occur during the process, a `500 Internal Server Error` response is returned with the error message.
 
-API documentation for the `updateTournament` function:
+### API documentation for the `updateTournament` function:
 
 ### Tournament API
 
@@ -3567,7 +3567,7 @@ API documentation for the `updateTournament` function:
 
 ### Entry API
 
-API documentation for the `enterTournament` function:
+### API documentation for the `enterTournament` function:
 
 #### POST /api/tournament/:tournamentId/enter
 
@@ -3710,7 +3710,7 @@ API documentation for the `enterTournament` function:
 - **Create Entry**: If validation passes and the tournament and user exist, a new entry is created in the `Entry` model with the status set to "Pending".
 - **Return Response**: If the entry is successfully created, a `201 Created` response is returned with the entry details. If any errors occur during the process, a `500 Internal Server Error` response is returned with the error message.
 
-API documentation for the `getUserEntries` function:
+### API documentation for the `getUserEntries` function:
 
 #### GET /api/user/:userId/entries
 
@@ -3817,7 +3817,7 @@ API documentation for the `getUserEntries` function:
 - **Fetch Entries**: The entries for the user are retrieved by the user ID using the `findAll` method, including the associated tournament details. If no entries are found, a message is returned indicating that no entries were found for the user.
 - **Return Response**: If the entries are successfully retrieved, a `200 OK` response is returned with the list of entries and associated tournament details. If any errors occur during the process, a `500 Internal Server Error` response is returned with the error message.
 
-API documentation for the `updateEntryStatus` function:
+### API documentation for the `updateEntryStatus` function:
 
 #### PUT /api/entries/:entryId/status
 
@@ -3941,7 +3941,7 @@ API documentation for the `updateEntryStatus` function:
 
 ### Tournament Match API
 
-API documentation for the `createTournamentMatch` function:
+### API documentation for the `createTournamentMatch` function:
 
 #### POST /api/tournaments/:tournamentId/matches
 
@@ -4117,7 +4117,7 @@ API documentation for the `createTournamentMatch` function:
 - **Create Match**: If validation passes and the tournament and teams exist and are granted, a new match is created in the `MatchForTournament` model.
 - **Return Response**: If the match is successfully created, a `201 Created` response is returned with the match details. If any errors occur during the process, a `500 Internal Server Error` response is returned with the error message.
 
-API documentation for the `matchmake` function:
+### API documentation for the `matchmake` function:
 
 #### POST /api/tournaments/matchmake
 
@@ -4237,7 +4237,7 @@ API documentation for the `matchmake` function:
 - **Transaction Handling**: The matchmaking process is handled within a transaction. If any errors occur during the process, the transaction is rolled back, and a `500 Internal Server Error` response is returned with the error message.
 - **Return Response**: If the matchmaking is successfully completed, a `201 Created` response is returned with the created matches. If any errors occur during the process, a `500 Internal Server Error` response is returned with the error message.
 
-API documentation for the `updateMatchResult` function:
+### API documentation for the `updateMatchResult` function:
 
 #### PUT /api/tournaments/matches/:matchId/result
 

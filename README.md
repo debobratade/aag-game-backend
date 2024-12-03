@@ -14,7 +14,6 @@ Key features of the project include:
 
 The project is built using modern web technologies, ensuring a scalable and maintainable codebase.
 
-# TOURNAMENT-LEAGUE
 
 ## Project Overview
 

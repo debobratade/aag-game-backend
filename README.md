@@ -176,6 +176,7 @@ Matches are the individual games played between teams within a tournament.
 
 ### Subscription API
 
+
 ### API documentation for the `addSubscription` function:
 
 #### POST /api/subscriptions
@@ -283,6 +284,9 @@ Matches are the individual games played between teams within a tournament.
 - **Create Subscription**: If validation passes and the subscription name is not already used, a new subscription is created in the `Subscription` model.
 - **Return Response**: If the subscription is successfully created, a `201 Created` response is returned with the new subscription details and a success message.
 
+
+
+
 ### API documentation for the `getSubscriptions` function:
 
 #### GET /api/subscriptions
@@ -365,6 +369,8 @@ Matches are the individual games played between teams within a tournament.
 - **Fetch Subscriptions**: The `getSubscriptions` function retrieves all subscription plans from the `Subscription` model using the `findAll` method.
 - **Return Response**: If the subscriptions are successfully retrieved, a `200 OK` response is returned with the list of subscriptions.
 - **Error Handling**: If there is an error while fetching subscriptions, a `500 Internal Server Error` response is returned with an appropriate message.
+
+
 
 ### API documentation for the `selectSubscription` function:
 
@@ -472,6 +478,8 @@ Matches are the individual games played between teams within a tournament.
 - **Update User Subscription**: If both the user and subscription exist, the user's subscription ID is updated, and the changes are saved.
 - **Return Response**: If the subscription is successfully selected, a `200 OK` response is returned with a success message.
 
+
+
 ### User API
 
 ### API documentation for the `sendOtpController` function:
@@ -567,6 +575,9 @@ Matches are the individual games played between teams within a tournament.
 - **Generate and Send OTP**: An OTP is generated using the `generateOtp` utility function. If the OTP generation or sending fails, a `500 Internal Server Error` response is returned with an appropriate message.
 - **Upsert Phone Number and OTP**: The phone number and OTP are upserted in the `PhoneNumber` model.
 - **Return Response**: If the OTP is successfully sent, a `200 OK` response is returned with the OTP and a success message.
+
+
+
 
 ### API documentation for the `verify-otp` function:
 
@@ -673,6 +684,9 @@ Matches are the individual games played between teams within a tournament.
 - **Verify OTP**: The OTP provided by the user is compared with the OTP in the database. If they do not match, a `400 Bad Request` response is returned with an appropriate message.
 - **Update Verification Status**: If the OTP is valid and the phone number exists, the verification status of the phone number is updated, and the changes are saved.
 - **Return Response**: If the OTP is successfully verified, a `200 OK` response is returned with a success message.
+
+
+
 
 ### API documentation for the `updateEntryStatus` function:
 
@@ -846,6 +860,9 @@ Matches are the individual games played between teams within a tournament.
 - **Update Phone Record**: The phone record is updated to mark the phone number as registered.
 - **Return Response**: If the user is successfully created, a `201 Created` response is returned with the user details and a success message.
 
+
+
+
 ### API documentation for the `create-password` function:
 
 #### POST /api/users/create-password
@@ -967,6 +984,9 @@ Matches are the individual games played between teams within a tournament.
 - **Hash Password**: The password provided by the user is hashed using `bcrypt`.
 - **Create signin Record**: A new signin record is created in the `SignIn` model with the hashed password.
 - **Return Response**: If the password is successfully created, a `201 Created` response is returned with a success message.
+
+
+
 
 ### API documentation for the `signInController` function:
 
@@ -1108,6 +1128,9 @@ Matches are the individual games played between teams within a tournament.
 - **Generate JWT Token**: If the password is valid, a JWT token is generated using the user's ID and returned in the response.
 - **Return Response**: If the signin is successful, a `200 OK` response is returned with the JWT token and a success message.
 
+
+
+
 ### League API
 
 ### API documentation for the `createLeague` function:
@@ -1224,6 +1247,9 @@ Matches are the individual games played between teams within a tournament.
 - **Create League**: If validation passes and there are no conflicts, a new league is created in the `League` model.
 - **Return Response**: If the league is successfully created, a `201 Created` response is returned with the league details.
 
+
+
+
 ### API documentation for the `deleteLeague` function:
 
 #### DELETE /api/leagues/delete-leagues/:id
@@ -1294,6 +1320,9 @@ Matches are the individual games played between teams within a tournament.
 - **Delete Associated Matches and Teams**: If the league exists, all associated matches and teams are deleted using the `destroy` method on `MatchModel` and `Team` with the league ID as the condition.
 - **Delete League**: The league is then deleted using the `destroy` method on the `League` model.
 - **Return Response**: If the league and its associated entities are successfully deleted, a `204 No Content` response is returned. If any errors occur during the process, a `500 Internal Server Error` response is returned with the error message.
+
+
+
 
 ### API documentation for the `getLeagues` function:
 
@@ -1399,6 +1428,9 @@ Matches are the individual games played between teams within a tournament.
 - **Request Validation**: The query parameters are validated using `validateGetLeaguesQuery` from `leagueValidator`. If validation fails, a `400 Bad Request` response is returned with the validation error details.
 - **Fetch Leagues**: The leagues are retrieved based on the query parameters, including pagination, sorting, and optional filtering by name. If the query parameters are invalid, appropriate error responses are returned.
 - **Return Response**: If the leagues are successfully retrieved, a `200 OK` response is returned with the list of leagues. If any errors occur during the process, a `500 Internal Server Error` response is returned with the error message.
+
+
+
 
 ### API documentation for the `getLeagueById` function:
 
@@ -1521,6 +1553,9 @@ Matches are the individual games played between teams within a tournament.
 - **Request Validation**: The league ID is validated to ensure it is a number. If not, a `400 Bad Request` response is returned with an appropriate message.
 - **Fetch League**: The league is retrieved by its ID using the `findByPk` method, including its associated teams. If the league is not found, a `404 Not Found` response is returned with an appropriate message.
 - **Return Response**: If the league is successfully retrieved, a `200 OK` response is returned with the league details, including its associated teams. If any errors occur during the process, a `500 Internal Server Error` response is returned with the error message.
+
+
+
 
 ### API documentation for the `updateLeague` function:
 
@@ -1660,6 +1695,9 @@ Matches are the individual games played between teams within a tournament.
 - **Update League**: If validation passes and there are no conflicts, the league is updated with the new details provided in the request body.
 - **Return Response**: If the league is successfully updated, a `200 OK` response is returned with the updated league details.
 
+
+
+
 ### API documentation for the `deleteLeague` function:
 
 #### DELETE /api/leagues/delete-leagues/:id
@@ -1730,6 +1768,9 @@ Matches are the individual games played between teams within a tournament.
 - **Delete Associated Matches and Teams**: If the league exists, all associated matches and teams are deleted using the `destroy` method on `MatchModel` and `Team` with the league ID as the condition.
 - **Delete League**: The league is then deleted using the `destroy` method on the `League` model.
 - **Return Response**: If the league and its associated entities are successfully deleted, a `204 No Content` response is returned. If any errors occur during the process, a `500 Internal Server Error` response is returned with the error message.
+
+
+
 
 ### Match API
 
@@ -1903,6 +1944,9 @@ Matches are the individual games played between teams within a tournament.
 - **Create Match**: If all validations pass and there are no conflicts, a new match is created in the `Match` model.
 - **Return Response**: If the match is successfully created, a `201 Created` response is returned with the match details.
 
+
+
+
 ### API documentation for the `getMatchById` function:
 
 #### GET /api/match/:matchId
@@ -2044,6 +2088,9 @@ Matches are the individual games played between teams within a tournament.
 - **Fetch Match**: The match is retrieved by its ID using the `findByPk` method, including its associated teams and league. If the match is not found, a `404 Not Found` response is returned with an appropriate message.
 - **Return Response**: If the match is successfully retrieved, a `200 OK` response is returned with the match details, including its associated teams and league. If any errors occur during the process, a `500 Internal Server Error` response is returned with the error message.
 
+
+
+
 ### API documentation for the `getMatchesByLeagueId` function:
 
 #### GET /api/match/league/:leagueId
@@ -2174,6 +2221,9 @@ Matches are the individual games played between teams within a tournament.
 - **Fetch Matches**: The matches are retrieved by the league ID using the `findAll` method, including their associated teams and league. If any errors occur during the process, a `500 Internal Server Error` response is returned with the error message.
 - **Return Response**: If the matches are successfully retrieved, a `200 OK` response is returned with the list of matches, including their associated teams and league details.
 
+
+
+
 ### API documentation for the `getMatchById` function:
 
 #### GET /api/match/:matchId
@@ -2268,6 +2318,9 @@ Matches are the individual games played between teams within a tournament.
 - **Request Validation**: The match ID is validated to ensure it is a number. If not, a `400 Bad Request` response is returned with an appropriate message.
 - **Fetch Match**: The match is retrieved by its ID using the `findByPk` method with the `attributes` option to only include the `result`. If the match is not found, a `404 Not Found` response is returned with an appropriate message.
 - **Return Response**: If the match is successfully retrieved, a `200 OK` response is returned with the match result. If any errors occur during the process, a `500 Internal Server Error` response is returned with the error message.
+
+
+
 
 ### API documentation for the `updateMatchResult` function:
 
@@ -2410,6 +2463,9 @@ Matches are the individual games played between teams within a tournament.
 - **Update Match Result**: If the match is found and validation passes, the match result is updated with the new result from the request body.
 - **Return Response**: If the match result is successfully updated, a `200 OK` response is returned with a success message and the updated match details. If any errors occur during the process, a `500 Internal Server Error` response is returned with the error message.
 
+
+
+
 ### Team API
 
 ### API documentation for the `createMatch` function:
@@ -2543,6 +2599,9 @@ Matches are the individual games played between teams within a tournament.
 - **Create Team**: If validation passes and the league and user exist, a new team is created in the `Team` model.
 - **Return Response**: If the team is successfully created, a `201 Created` response is returned with the team details. If any errors occur during the process, a `500 Internal Server Error` response is returned with the error message.
 
+
+
+
 ### API documentation for the `getTeamById` function:
 
 #### GET /api/team/:teamId
@@ -2669,6 +2728,9 @@ Matches are the individual games played between teams within a tournament.
 - **Fetch Team**: The team is retrieved by its ID using the `findByPk` method, including its associated league and user. If the team is not found, a `404 Not Found` response is returned with an appropriate message.
 - **Return Response**: If the team is successfully retrieved, a `200 OK` response is returned with the team details, including its associated league and user. If any errors occur during the process, a `500 Internal Server Error` response is returned with the error message.
 
+
+
+
 ### API documentation for the `getTeamsByLeagueId` function:
 
 #### GET /api/team/:leagueId/get-teams
@@ -2793,6 +2855,9 @@ Matches are the individual games played between teams within a tournament.
 - **Fetch Teams**: The teams are retrieved by the league ID using the `findAll` method, including their associated league and user details. If no teams are found, a `404 Not Found` response is returned with an appropriate message.
 - **Return Response**: If the teams are successfully retrieved, a `200 OK` response is returned with the list of teams, including their associated league and user details. If any errors occur during the process, a `500 Internal Server Error` response is returned with the error message.
 
+
+
+
 ### API documentation for the `getTeamsByUserId` function:
 
 #### GET /api/team/user/:userId
@@ -2907,11 +2972,12 @@ Matches are the individual games played between teams within a tournament.
 - **Fetch Teams**: The teams are retrieved by the user ID using the `findAll` method, including their associated league details. If no teams are found, a `404 Not Found` response is returned with an appropriate message.
 - **Return Response**: If the teams are successfully retrieved, a `200 OK` response is returned with the list of teams, including their associated league details. If any errors occur during the process, a `500 Internal Server Error` response is returned with the error message.
 
-### Tournament Match API
 
-### API documentation for the `createTournament` function:
+
 
 ### Tournament API
+
+### API documentation for the `createTournament` function:
 
 #### POST /api/tournaments/create-tournaments
 
@@ -3083,6 +3149,9 @@ Matches are the individual games played between teams within a tournament.
 - **Create Tournament**: If validation passes and there are no conflicts, the tournament is created in the `Tournament` model.
 - **Return Response**: If the tournament is successfully created, a `201 Created` response is returned with a success message and the created tournament details. If any errors occur during the process, a `500 Internal Server Error` response is returned with the error message.
 
+
+
+
 ### API documentation for the `deleteTournament` function:
 
 #### DELETE /api/tournaments/tournaments/:id
@@ -3169,6 +3238,9 @@ Matches are the individual games played between teams within a tournament.
 - **Delete Associated Entries and Matches**: If the tournament exists, all associated entries and matches are deleted using the `destroy` method on `Entry` and `MatchForTournament` with the tournament ID as the condition.
 - **Delete Tournament**: The tournament is then deleted using the `destroy` method on the `Tournament` model. If the tournament is not found, a `404 Not Found` response is returned with an appropriate message.
 - **Return Response**: If the tournament and its associated entities are successfully deleted, a `204 No Content` response is returned. If any errors occur during the process, a `500 Internal Server Error` response is returned with the error message.
+
+
+
 
 ### API documentation for the `getTournamentById` function:
 
@@ -3282,6 +3354,9 @@ Matches are the individual games played between teams within a tournament.
 - **Fetch Tournament**: The tournament is retrieved by its ID using the `findByPk` method. If the tournament is not found, a `404 Not Found` response is returned with an appropriate message.
 - **Return Response**: If the tournament is successfully retrieved, a `200 OK` response is returned with the tournament details. If any errors occur during the process, a `500 Internal Server Error` response is returned with the error message.
 
+
+
+
 ### API documentation for the `getTournaments` function:
 
 #### GET /api/tournaments
@@ -3386,9 +3461,10 @@ Matches are the individual games played between teams within a tournament.
 - **Fetch Tournaments**: The tournaments are retrieved based on the query parameters, including pagination, sorting, and optional filtering by name, start time, and end time. If any errors occur during the process, appropriate error responses are returned.
 - **Return Response**: If the tournaments are successfully retrieved, a `200 OK` response is returned with the list of tournaments and pagination details. If any errors occur during the process, a `500 Internal Server Error` response is returned with the error message.
 
-### API documentation for the `updateTournament` function:
 
-### Tournament API
+
+
+### API documentation for the `updateTournament` function:
 
 #### PUT /api/tournaments/:id
 
@@ -3565,6 +3641,9 @@ Matches are the individual games played between teams within a tournament.
 - **Update Tournament**: If validation passes and the tournament exists, the tournament is updated with the new details provided in the request body.
 - **Return Response**: If the tournament is successfully updated, a `200 OK` response is returned with a success message and the updated tournament details. If any errors occur during the process, a `500 Internal Server Error` response is returned with the error message.
 
+
+
+
 ### Entry API
 
 ### API documentation for the `enterTournament` function:
@@ -3710,6 +3789,9 @@ Matches are the individual games played between teams within a tournament.
 - **Create Entry**: If validation passes and the tournament and user exist, a new entry is created in the `Entry` model with the status set to "Pending".
 - **Return Response**: If the entry is successfully created, a `201 Created` response is returned with the entry details. If any errors occur during the process, a `500 Internal Server Error` response is returned with the error message.
 
+
+
+
 ### API documentation for the `getUserEntries` function:
 
 #### GET /api/user/:userId/entries
@@ -3816,6 +3898,9 @@ Matches are the individual games played between teams within a tournament.
 - **Check User**: The user is checked to see if they exist by their ID using the `findByPk` method. If the user is not found, a `404 Not Found` response is returned with an appropriate message.
 - **Fetch Entries**: The entries for the user are retrieved by the user ID using the `findAll` method, including the associated tournament details. If no entries are found, a message is returned indicating that no entries were found for the user.
 - **Return Response**: If the entries are successfully retrieved, a `200 OK` response is returned with the list of entries and associated tournament details. If any errors occur during the process, a `500 Internal Server Error` response is returned with the error message.
+
+
+
 
 ### API documentation for the `updateEntryStatus` function:
 
@@ -3938,6 +4023,9 @@ Matches are the individual games played between teams within a tournament.
 - **Check Entry**: The entry is checked to see if it exists by its ID using the `findByPk` method. If the entry is not found, a `404 Not Found` response is returned with an appropriate message.
 - **Update Entry Status**: If the entry is found and validation passes, the entry status is updated with the new status from the request body.
 - **Return Response**: If the entry status is successfully updated, a `200 OK` response is returned with a success message and the updated entry details. If any errors occur during the process, a `500 Internal Server Error` response is returned with the error message.
+
+
+
 
 ### Tournament Match API
 
@@ -4117,6 +4205,9 @@ Matches are the individual games played between teams within a tournament.
 - **Create Match**: If validation passes and the tournament and teams exist and are granted, a new match is created in the `MatchForTournament` model.
 - **Return Response**: If the match is successfully created, a `201 Created` response is returned with the match details. If any errors occur during the process, a `500 Internal Server Error` response is returned with the error message.
 
+
+
+
 ### API documentation for the `matchmake` function:
 
 #### POST /api/tournaments/matchmake
@@ -4236,6 +4327,9 @@ Matches are the individual games played between teams within a tournament.
 - **Perform Matchmaking**: If there are enough participants, they are grouped into pairs and matches are created. Entry statuses are updated to "Matched".
 - **Transaction Handling**: The matchmaking process is handled within a transaction. If any errors occur during the process, the transaction is rolled back, and a `500 Internal Server Error` response is returned with the error message.
 - **Return Response**: If the matchmaking is successfully completed, a `201 Created` response is returned with the created matches. If any errors occur during the process, a `500 Internal Server Error` response is returned with the error message.
+
+
+
 
 ### API documentation for the `updateMatchResult` function:
 

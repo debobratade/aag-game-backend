@@ -14,8 +14,6 @@ Key features of the project include:
 
 The project is built using modern web technologies, ensuring a scalable and maintainable codebase.
 
-# TOURNAMENT-LEAGUE
-
 ## Project Overview
 
 **TOURNAMENT-LEAGUE** is a comprehensive web application designed to manage and facilitate sports leagues and tournaments. The application provides a platform for users to create, manage, and participate in various leagues and tournaments. It aims to streamline the process of organizing sports events by offering features like user authentication, league creation, tournament management, team management, and match scheduling.
